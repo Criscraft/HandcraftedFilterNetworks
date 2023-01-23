@@ -28,7 +28,7 @@ Install the requirements from the requirements.txt file:
 
     pip install -r requirements.txt
 
-Then open an interactive python session
+Please test, if you have GPU support. Open an interactive python session
 
     python
 
@@ -38,21 +38,14 @@ and type
     print(torch.cuda.is_avaliable())
 
 The output should be "True".
-If not, please check if your [CUDA](https://developer.nvidia.com/cuda-downloads) version is up-to-date. Then, go to the [Pytorch website](https://pytorch.org/), insert your specifications there. You will receive an install command that for pytorch that suits your CUDA version. After installing the Pytorch version that suits your setup, you should have GPU support.
+If not, please check if your [CUDA](https://developer.nvidia.com/cuda-downloads) version is up-to-date. Then, go to the [Pytorch website](https://pytorch.org/), insert your specifications there. You will receive an install command for pytorch that suits your CUDA version. After installing the Pytorch version that suits your setup you should have GPU support.
 
 # Requirements
 
 Tested for Python 3.8.0
 
-    certifi==2022.6.15
-    charset-normalizer==2.1.1
-    idna==3.3
     numpy==1.23.2
     Pillow==9.2.0
-    requests==2.28.1
     torch==1.12.1+cu116
-    torchaudio==0.12.1+cu116
     torchinfo==1.7.0
     torchvision==0.13.1+cu116
-    typing-extensions==4.3.0
-    urllib3==1.26.12
