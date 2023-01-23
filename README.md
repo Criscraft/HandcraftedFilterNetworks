@@ -40,6 +40,12 @@ and type
 The output should be "True".
 If not, please check if your [CUDA](https://developer.nvidia.com/cuda-downloads) version is up-to-date. Then, go to the [Pytorch website](https://pytorch.org/), insert your specifications there. You will receive an install command for pytorch that suits your CUDA version. After installing the Pytorch version that suits your setup you should have GPU support.
 
+# Get started:
+The repository contains a script "example.py" which shows how to load the HFNet model.
+You can run the script using:
+
+    python example.py
+
 # Requirements
 
 Tested for Python 3.8.0

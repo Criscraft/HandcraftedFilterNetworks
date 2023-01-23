@@ -9,7 +9,7 @@ def summarize_network(network, input_size):
     return summary(network, input_size)
 
 hfnet18 = PFNet(
-    n_classes = 100,
+    n_classes = 102,
     start_config = {
         'k' : 3, 
         'filter_mode' : 'All',
@@ -18,8 +18,7 @@ hfnet18 = PFNet(
         'n_channels_out' : 64,
         'stride' : 2,
         'f' : 16,
-        'handcrafted_filters_require_grad' : False,
-    },
+        'predefined_filters_require_grad' : False},
     blockconfig_list = [
         {'k' : 3, 
         'filter_mode_1' : 'All',
@@ -30,8 +29,8 @@ hfnet18 = PFNet(
         'n_channels_out' : 64 * 2**i,
         'stride' : 2 if i>0 else 1,
         'f' : 1,
-        'handcrafted_filters_require_grad' : False,
-        } for i in range(4)],
+        'predefined_filters_require_grad' : False} for i in range(4)],
+    activation="relu"
 )
 
 summarize_network(hfnet18, (1, 3, 224, 224))
